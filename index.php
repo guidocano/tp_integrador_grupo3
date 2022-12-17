@@ -12,7 +12,6 @@
 
                 <div class="login-form">
                     <h2 class="title">LOGIN</h2>
-
                     <form action="./login.php" method="post">
                         <label for="usuario">Usuario</label><br>
                         <input type="text" id="usuario" name="usuario"/><br>   
@@ -27,7 +26,11 @@
                         
                     </form>
 
+
+                    
                 </div>    
 </body>
 
 </html>
+
+<?php 

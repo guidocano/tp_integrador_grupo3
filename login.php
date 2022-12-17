@@ -31,7 +31,7 @@ if ($connect) {
     // si SI encuentra el id de usuario se loguea y muestra la tabla
     } else {
         //trae las tareas de la base de datos
-        $instruccion="Select * from tareas";
+        $instruccion="SELECT * from tareas";
         $consulta=mysqli_query($connect,$instruccion) or die ("Fallo en la consulta");
         $filas=mysqli_num_rows($consulta);
 
@@ -54,17 +54,17 @@ if ($connect) {
             print "</div>";
     
     
-            print "<form class='row g-3'>";    
+            print "<form class='row g-3' action='adminToDO.php' method=''POST>";    
             print "<div class='mb-3'>";
             print "<input type='text' class='form-control' id='formGroupExampleInput' placeholder='Tipee una tarea aqui'>";
             print "<div class='col-auto'>";
-            print "<button type='submit' class='btn btn-primary mb-3'>Agregar</button>";
+            print "<button type='submit' class='btn btn-primary mb-3' value='Agregar' name='agregar'>Agregarssss</button>";
             print "</div>";
             print "<div class='col-auto'>";
-            print "<button type='submit' class='btn btn-info mb-3'>Editar</button>";
+            print "<button type='submit' class='btn btn-info mb-3' value='Modificar'>Editar</button>";
             print "</div>";
             print "<div class='col-auto'>";
-            print "<button type='submit' class='btn btn-danger mb-3'>Borrar</button>";
+            print "<button type='submit' class='btn btn-danger mb-3' value='Borrar'>Borrar</button>";
             print "</div>";
             print "</div>";
             print "</form>";
@@ -77,6 +77,7 @@ if ($connect) {
             print "<th scope='col'>Descripcion</th>";
             print "<th scope='col'>Realizado</th>";
             print "<th scope='col'>Seleccionar</th>";
+            print "<th scope='col'>Borrar</th>";
             print "</tr>";
 
 
@@ -85,14 +86,12 @@ if ($connect) {
 
             while ($fila = mysqli_fetch_array($consulta)) {
                 print "<tr>
-                <td>" . $fila['ID'] . "</td>
-                <td>" . $fila['descripcion'] . "</td>
-                <td>" . $fila['realizado'] . "</td>
-
-                <td><input type='checkbox' name='aEditar[]' value=" . $fila['ID'] . "></td>
+                <td>".$fila['ID']."</td>
+                <td>".$fila['descripcion']."</td>
+                <td>".$fila['realizado']."</td>                
+                <td><input type='checkbox' name='aEditar[]' value=".$fila['ID'] . "></td>
+                <td><input type='checkbox' name='aBorrar[]' value=".$fila['ID'] . "></td>
                 </tr>";
-
-
             }
         }
 

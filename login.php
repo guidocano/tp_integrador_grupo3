@@ -58,7 +58,7 @@ if ($connect) {
             print "<div class='mb-3'>";
             print "<input type='text' class='form-control' id='formGroupExampleInput' placeholder='Tipee una tarea aqui'>";
             print "<div class='col-auto'>";
-            print "<button type='submit' class='btn btn-primary mb-3' value='Agregar' name='agregar'>Agregarssss</button>";
+            print "<button type='submit' class='btn btn-primary mb-3' value='Agregar' name='agregar'>Agregar</button>";
             print "</div>";
             print "<div class='col-auto'>";
             print "<button type='submit' class='btn btn-info mb-3' value='Modificar'>Editar</button>";

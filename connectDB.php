@@ -4,7 +4,7 @@ function conectar(){
     // usuario MAESTRO que se conecta con la BD
     $usuario = "root";
     $pass= "";
-    $bd = "usuarios";
+    $bd = "tpasap";
     $servidor = "localhost";
 
     $connect = mysqli_connect($servidor, $usuario, $pass, $bd);

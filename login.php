@@ -90,7 +90,6 @@ if ($connect) {
                 <td>" . $fila['realizado'] . "</td>
 
                 <td><input type='checkbox' name='aEditar[]' value=" . $fila['ID'] . "></td>
-                <td><input type='checkbox' name='aEditar[]' value=" . $fila['ID'] . "></td>
                 </tr>";
 
 

@@ -60,6 +60,12 @@ if ($connect) {
             print "<div class='col-auto'>";
             print "<button type='submit' class='btn btn-primary mb-3'>Agregar</button>";
             print "</div>";
+            print "<div class='col-auto'>";
+            print "<button type='submit' class='btn btn-info mb-3'>Editar</button>";
+            print "</div>";
+            print "<div class='col-auto'>";
+            print "<button type='submit' class='btn btn-danger mb-3'>Borrar</button>";
+            print "</div>";
             print "</div>";
             print "</form>";
     
@@ -70,7 +76,7 @@ if ($connect) {
             print "<th scope='col'>#</th>";
             print "<th scope='col'>Descripcion</th>";
             print "<th scope='col'>Realizado</th>";
-            print "<th scope='col'>Editar</th>";
+            print "<th scope='col'>Seleccionar</th>";
             print "</tr>";
 
 
@@ -83,6 +89,7 @@ if ($connect) {
                 <td>" . $fila['descripcion'] . "</td>
                 <td>" . $fila['realizado'] . "</td>
 
+                <td><input type='checkbox' name='aEditar[]' value=" . $fila['ID'] . "></td>
                 <td><input type='checkbox' name='aEditar[]' value=" . $fila['ID'] . "></td>
                 </tr>";
 

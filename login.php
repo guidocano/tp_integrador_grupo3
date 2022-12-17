@@ -67,10 +67,10 @@ if ($connect) {
             print "<table class='table caption-top'>";
             print "<thead>";
             print "<tr>";
-            print "<th scope='col'>Editar</th>";
+            print "<th scope='col'>#</th>";
             print "<th scope='col'>Descripcion</th>";
             print "<th scope='col'>Realizado</th>";
-            print "<th scope='col'>#</th>";
+            print "<th scope='col'>Editar</th>";
             print "</tr>";
 
 

@@ -91,6 +91,11 @@ if ($connect) {
         }
 
         print "</table>";
+        print "<div class='tareasRealizadas'>";
+        print "<input class='form-check-input' type='checkbox' value='' id='flexCheckDefault'>";
+        print "<label class='form-check-label' for='flexCheckDefault'> Mostrar tareas realizadas</label>";
+        print "</td>";
+        print "</div>";
         print "</div>";
         print "</body>";
 

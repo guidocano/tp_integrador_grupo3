@@ -12,6 +12,15 @@ if  ($connect)
 ?>
 
 
+
+<?php
+    //AGREGAR   el de arriba tambien es un metodo agregar no etaria sabiendo cual de los
+
+
+if (isset($_POST['agregar'])) 
+{
+?>
+
 <form action='insertToDo.php' method='POST'>
 <span>Texto a agregar</span>
 <input type="text" name="descripcion" value=''><br>
@@ -20,29 +29,26 @@ if  ($connect)
 <input type=submit value='Agregar'>
 </form>
 </body>
-<?php
-    //AGREGAR   el de arriba tambien es un metodo agregar no etaria sabiendo cual de los
-
-
-if (isset($_POST['agregar'])) 
-{
-?>
-<form action='insertToDo.php' method='POST'>
+<!-- <form action='insertToDo.php' method='POST'>
 <span>Texto a agregar</span>
 <input type="text" name="descripcion" value=''><br>
 <span>realizado</span>
 <input type="text" name="descripcion" value=''><br>
 <input type=submit value='Agregar'>
 </form>
-</body>
+</body> -->
 <?php
 }
 
 
 //BORRAR
+//NO LOGRO QUE RECIBA LA INFORMACION DE 'aBorrar' DESDE LOGIN
+
+//PRUEBA
+
 if (!empty($_POST['aBorrar'])){
     foreach($_POST['aBorrar'] as $selected){
-        $sql="delete from tareas where ID=".$selected;
+        $sql="DELETE FROM tareas where ID=".$selected;
         $resultado=mysqli_query($connect, $sql) or die(mysqli_error($connect));
         print "tarea ID ".$selected." Borrado";
     }

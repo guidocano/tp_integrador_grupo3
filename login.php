@@ -53,8 +53,8 @@ if ($connect) {
             print "<h2>blbalba  items incompletos</h2>";
             print "</div>";
     
-    
-            print "<form class='row g-3' action='adminToDO.php' method=''POST>";    
+            // BOTONES AGREGAR EDITAR BORRAR
+            print "<form class='row g-3' action='adminToDo.php' method='POST'>";    
             print "<div class='mb-3'>";
             print "<input type='text' class='form-control' id='formGroupExampleInput' placeholder='Tipee una tarea aqui'>";
             print "<div class='col-auto'>";
@@ -67,22 +67,20 @@ if ($connect) {
             print "<button type='submit' class='btn btn-danger mb-3' value='Borrar'>Borrar</button>";
             print "</div>";
             print "</div>";
-            print "</form>";
     
-    
+            //ENCABEZADOS TABLA
             print "<table class='table caption-top'>";
             print "<thead>";
             print "<tr>";
             print "<th scope='col'>#</th>";
             print "<th scope='col'>Descripcion</th>";
             print "<th scope='col'>Realizado</th>";
-            print "<th scope='col'>Seleccionar</th>";
+            print "<th scope='col'>Editar</th>";
             print "<th scope='col'>Borrar</th>";
             print "</tr>";
 
 
             // carga cada Tarea en una fila. 
-            // ACA LA OPCION PARA EDITAR, NO ESTA HECHA
 
             while ($fila = mysqli_fetch_array($consulta)) {
                 print "<tr>
@@ -96,12 +94,17 @@ if ($connect) {
         }
 
         print "</table>";
+        print "</form>";
+
         print "<div class='tareasRealizadas'>";
         print "<input class='form-check-input' type='checkbox' value='' id='flexCheckDefault'>";
         print "<label class='form-check-label' for='flexCheckDefault'> Mostrar tareas realizadas</label>";
         print "</td>";
         print "</div>";
+
+
         print "</div>";
+
         print "</body>";
 
 

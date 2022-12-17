@@ -3,7 +3,7 @@
 function conectar(){
     // usuario MAESTRO que se conecta con la BD
     $usuario = "root";
-    $pass= "1234";
+    $pass= "";
     $bd = "tpasap";
     $servidor = "localhost";
 

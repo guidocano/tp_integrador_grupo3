@@ -1,0 +1,17 @@
+body {
+    background-color: #c7e0f6;
+}
+
+.login-form{
+    margin-top: 160px;
+    text-align: center; 
+}
+
+.login-form input {
+    padding: 8px 20px;
+    margin-bottom: 25px
+}
+
+.title{
+    padding-bottom: 20px;
+}

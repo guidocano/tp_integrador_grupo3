@@ -11,7 +11,7 @@ if ($connect) {
     $sql = "insert into tareas (descripcion, realizado) values ('".$descripcion."', 0)";
 
     $rpta = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-    print "La tarea ".$descripcion." fue agregado";
+    print "La tarea ".$descripcion." fue agregada";
     desconectar($connect);
 } else {
     print "<h3>NO Conexion a la BD cursophp<h3>";

@@ -1,6 +1,6 @@
 <head>
     <title>Admin ToDO</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <?php
@@ -14,8 +14,7 @@ if  ($connect)
 
 
 <?php
-    //AGREGAR   el de arriba tambien es un metodo agregar no etaria sabiendo cual de los
-
+//AGREGAR   el de arriba tambien es un metodo agregar no etaria sabiendo cual de los
 
 if (isset($_POST['agregar'])) 
 {
@@ -29,22 +28,12 @@ if (isset($_POST['agregar']))
 <input type=submit value='Agregar'>
 </form>
 </body>
-<!-- <form action='insertToDo.php' method='POST'>
-<span>Texto a agregar</span>
-<input type="text" name="descripcion" value=''><br>
-<span>realizado</span>
-<input type="text" name="descripcion" value=''><br>
-<input type=submit value='Agregar'>
-</form>
-</body> -->
+
 <?php
 }
 
 
 //BORRAR
-//NO LOGRO QUE RECIBA LA INFORMACION DE 'aBorrar' DESDE LOGIN
-
-//PRUEBA
 
 if (!empty($_POST['aBorrar'])){
     foreach($_POST['aBorrar'] as $selected){
@@ -54,7 +43,6 @@ if (!empty($_POST['aBorrar'])){
     }
 
   }
-
 
   //MODIFICAR
 if (!empty($_POST['aEditar']))

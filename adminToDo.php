@@ -21,7 +21,7 @@ if (isset($_POST['agregar']))
 ?>
 
 <form action='insertToDo.php' method='POST'>
-<span>Texto a agregar</span>
+<span>Agregar Tarea</span>
 <input type="text" name="descripcion" value=''><br>
 <span>realizado</span>
 <input type=text name='realizado' value=''><br>

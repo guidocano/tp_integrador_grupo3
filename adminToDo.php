@@ -1,6 +1,7 @@
 <head>
     <title>Admin ToDO</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    
 </head>
 <body>
 <?php
@@ -23,7 +24,7 @@ if (isset($_POST['agregar']))
 <form action='insertToDo.php' method='POST'>
 <span>Agregar Tarea</span>
 <input type="text" name="descripcion" value=''><br>
-<span>realizado</span>
+<span>Realizado</span>
 <input type=text name='realizado' value=''><br>
 <input type=submit value='Agregar'>
 </form>
@@ -64,6 +65,8 @@ if (!empty($_POST['aEditar']))
 <input type=text name='ID' value='<?php print $fila['ID']?>'><br>
 <span>Descripcion</span>
 <input type=text name='descripcion' value='<?php print $fila['descripcion']?>'><br>
+<span>Realizado</span>
+<input type=text name='realizado' value='<?php print $fila['realizado']?>'><br>
 <input type=submit value='Modificar'>
 </form>
 

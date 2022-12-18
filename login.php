@@ -116,6 +116,4 @@ if ($connect) {
     print "<h3>Hubo un problema</h3>";
 }
 
-
-
 ?>

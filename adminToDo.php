@@ -1,9 +1,12 @@
 <head>
     <title>Admin ToDO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link href="styles.css" rel="stylesheet" type="text/css">
     
 </head>
 <body>
+
 <?php
 require 'connectDB.php';
 
@@ -12,22 +15,25 @@ if  ($connect)
 {    
 ?>
 
-
-
 <?php
 //AGREGAR   el de arriba tambien es un metodo agregar no etaria sabiendo cual de los
 
 if (isset($_POST['agregar'])) 
 {
 ?>
-
-
+<div class="btnsAdminAgregar">
+<div class="container containerAdmin">
 <form action='insertToDo.php' method='POST'>
 <span>Agregar Tarea</span>
-<input type="text" name="descripcion" value=''><br>
-<input type=submit value='Agregar'>
+<input type="text" name="descripcion" value='' class="textAgregar"><br>
+<div class="btnsAdminAgregar">
+<button type="submit" class="btn btn-primary" name="btnIngresar" value='Agregar'>Agregar</button>
+<button type="reset" class="btn btn-primary">Borrar</button>   
+</div>
+
 </form>
 </body>
+<a href="./login.php">Volver atras</a>
 
 <?php
 }
@@ -58,7 +64,8 @@ if (!empty($_POST['aEditar']))
         {
             while($fila=mysqli_fetch_array($resultado)){
 ?>
-
+<div class="container" id="containerAdminModi">
+    <div></div>
 <form action="modificarToDo.php" method="POST">
 <span>ID</span>
 <input type=text name='ID' value='<?php print $fila['ID']?>'><br>
@@ -71,7 +78,8 @@ if (!empty($_POST['aEditar']))
 <label>NO Realizada</label><br>
 <input type=submit value='Modificar'>
 </form>
-
+<a href="./login.php">Volver atras</a>
+</div>
 <?php
             }
         }

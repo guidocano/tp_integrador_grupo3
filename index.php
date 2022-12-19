@@ -8,29 +8,46 @@
     <link rel="stylesheet" href="styles.css">
     <title>To Do</title>
 </head>
-<body class="indexBody">
-        <div>
-                <div class="login-form">
-                    <h2 class="title">LOGIN</h2>
-                    <form action="./login.php"  method="post">
-                        <label for="usuario">Usuario</label><br>
-                        <input type="text" id="usuario" name="usuario"/><br>   
-                                                
-                        <label for="pass">PASSWORD</label><br>
-                        <input type="password" id="pass" name="pass"/><br>
-                        
-                        <button class="btn btn-success" type="submit">Enter</button>
-                        <br/>
-                        <br/>
-                        <p>Para registrarte presiona </p><a href="./Registrar.html">Registrar</a>
-                    
-                        
-                    </form>
-
-
-                    
-                </div>    
+<body>
+    <h1 class="logInIndex">Log-In</h1>
+    <form class ="formulario" method="post" action="login.php">
+        <div class="container" id="container2">
+            <div class="visual">
+                <div class="encudre">
+                <div class="mb-5">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input name="usuario" type="text" id="usuario"  class="form-control" aria-describedby="textHelp">
+                    <label for="pass" class="form-label">Password</label>
+                    <input type="password" class="form-control"  id="pass" name="pass">
                 </div>
+                <div>
+                </div>
+                <div class="btnsIndex">
+                <button type="submit" class="btn btn-primary" name="btnIngresar">Ingresar</button>
+                <button type="reset" class="btn btn-primary">Borrar</button>         
+                </div>
+                <div class="indexRegistro">
+                <p>Para registrarte presiona</p><a href="./Registrar.php">Registrar</a>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <?php
+?>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

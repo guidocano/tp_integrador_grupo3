@@ -4,20 +4,109 @@ body {
     background-size: 100%;
 }
 
-
-.login-form{
-    margin-top: 160px;
-    text-align: center; 
+.visual {
+    padding: 40px;
+    background-color: rgba(246, 246, 246, 0.688);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    max-width:380px;
 }
 
-.login-form input {
-    padding: 8px 20px;
-    margin-bottom: 25px
+.form-control{
+    height: 35px;
+    max-width: 220px;
 }
 
-.title{
-    padding-bottom: 20px;
+h1{
+    text-align: center;
+    padding-bottom: 30px;
 }
+
+.btnsIndex {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mb-5{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    text-align: center;
+}
+
+.btnsIndex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logInIndex{
+    margin-top: 150px;
+}
+/* ACA TERMINA LO QUE ES TODA LA PARTE DEL INDEX  Y EMPEZAMOS CON EL DE REGISTRO*/ 
+
+#containerRegistro{
+    background-color: rgba(255, 254, 254, 0.611);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    width: 300px;
+    height: 300px;
+    margin-top: 250px;
+
+}
+
+.btnRegistro{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ margin-top: 30px;
+
+}
+
+
+/* ACA TERMINA EL REGISTRO Y COMENZAMOS CON EL REGISTROTODO */ 
+
+
+.aRegistro{
+    background-color: white;
+}
+
+
+/* ACA HACEMOS EL ADMIN TO do AGREGAR */ 
+#containerAdmin{
+    background-color: rgba(255, 254, 254, 0.611);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    width: 300px;
+    height: 300px;
+    margin-top: 250px;
+}
+
+.textAgregar{
+    height: 35px;
+    width: 100%;
+}
+
+.btnsAdminAgregar{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin-top: 30px;
+
+}
+
+/* ACA HACEMOS EL ADMIIN TO DO DE MODIFICAR*/ 
+
+
+
 
 /* TO DO STYLES */
 
@@ -52,7 +141,7 @@ body {
     padding: 20px;
 }
 
-.container {
+.container{
     margin-top:50px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -78,4 +167,12 @@ span{
     width: 100px;
     display: inline-block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#container2{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    border: none;
 }

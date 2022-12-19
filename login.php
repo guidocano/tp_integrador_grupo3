@@ -22,7 +22,6 @@ if ($connect) {
     $rta = mysqli_query($connect, $sql) or die(mysqli_error($connect));
     $filas=mysqli_num_rows($rta);
     $logeado = $rta->fetch_object();
-    $id = $_SESSION['id'] = $logeado->id;
   
 
 
@@ -36,6 +35,7 @@ if ($connect) {
         
         //trae las tareas de la base de datos
         //No realizados
+        $id = $_SESSION['id'] = $logeado->id;
         $instruccion="SELECT * from tpasap.tareas WHERE idusuario='$id' AND realizado='0'";
         $consulta=mysqli_query($connect,$instruccion) or die ("Fallo en la consulta");
         $filas=mysqli_num_rows($consulta);

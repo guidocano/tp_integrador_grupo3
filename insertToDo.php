@@ -35,7 +35,7 @@ if ($connect) {
     <h1> La tarea ".$descripcion." fue agregada </h1>
     
     
-    <a href='./login.php'>Volver atras</a>
+    <a href='./index.php'>Volver atras</a>
     </div>
     ";
     desconectar($connect);

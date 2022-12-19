@@ -12,18 +12,20 @@
 <div class="container">
 
 <?php
+session_start();
 require_once 'connectDB.php';
 
 $connect=conectar(); // implica un OPEN de la BD
 
 if ($connect) {
+    $id = $_SESSION['id'];
     print "<h1>TAREAS REALIZADAS<h1>";
 // ejemplo 
-$instruccion="Select * from tareas where realizado > 0";
+$instruccion="SELECT * FROM tpasap.tareas WHERE realizado='1' AND idusuario='$id' ";
 $consulta=mysqli_query($connect,$instruccion) or die ("Fallo en la consulta");
 $filas=mysqli_num_rows($consulta);
-    if ($filas == 1){
-        print ("no hay tareas a realizar <br>");
+    if ($filas == 0){
+        print ("no hay tareas realizadas <br>");
     }else {       
         while ($fila=mysqli_fetch_array($consulta)){
             print "
@@ -38,7 +40,7 @@ $filas=mysqli_num_rows($consulta);
 } else {
     print " No conecto ";
 }
-print "<a href='./login.php'>Volver a atras</a>";
+print "<a href='./index.php'>Volver a atras</a>";
 ?>
 
 

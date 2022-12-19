@@ -33,7 +33,7 @@ if (isset($_POST['agregar']))
 
 </form>
 </body>
-<h3><a href='./login.php'>Volver atras</a></h3>
+<h3><a href='./index.php'>Volver atras</a></h3>
 
 <?php
 }
@@ -50,7 +50,7 @@ if (!empty($_POST['aBorrar'])){
         <div class='container'>
         <h1> tarea fue Borrada <br></h1>
         
-        <h3><a href='./login.php'>Volver atras</a></h3>
+        <h3><a href='./index.php'>Volver atras</a></h3>
         </div>        
         ";
 
@@ -91,7 +91,7 @@ if (!empty($_POST['aEditar']))
 <label>NO Realizada</label><br>
 <input type=submit value='Modificar'>
 </form>
-<h3><a href="./login.php">Volver atras</a></h3>
+<h3><a href="./index.php">Volver atras</a></h3>
 </div>
 <?php
             }

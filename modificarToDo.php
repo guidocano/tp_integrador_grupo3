@@ -34,7 +34,7 @@ if ($connect) {
 
     <h1>La Tarea  $descripcion  fue modificada<br></h1>
     
-    <h2><a href='./login.php'>Volver atras</a></h2>
+    <h2><a href='./index.php'>Volver atras</a></h2>
     </div>
     ";
 

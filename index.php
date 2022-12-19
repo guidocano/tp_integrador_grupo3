@@ -27,7 +27,7 @@
                 <button type="reset" class="btn btn-primary">Borrar</button>         
                 </div>
                 <div class="indexRegistro">
-                <p>Para registrarte presiona</p><a href="./Registrar.php">Registrar</a>
+                <a style="display:flex;justify-content:center;margin-top:15px;" href="./Registrar.php">Registrar aquí</a> 
                 </div>        
             </div>
         </div>

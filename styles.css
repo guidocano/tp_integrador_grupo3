@@ -1,6 +1,9 @@
 body {
-    background-color: #c7e0f6;
+    background-color: #4d96d5;
+    background-image: url('./images/background.jpg');
+    background-size: 100%;
 }
+
 
 .login-form{
     margin-top: 160px;

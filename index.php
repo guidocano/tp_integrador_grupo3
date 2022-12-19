@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <title>To Do</title>
 </head>
-<body>
-
+<body class="indexBody">
+        <div>
                 <div class="login-form">
                     <h2 class="title">LOGIN</h2>
-                    <form action="./login.php" method="post">
+                    <form action="./login.php"  method="post">
                         <label for="usuario">Usuario</label><br>
                         <input type="text" id="usuario" name="usuario"/><br>   
                                                 
@@ -22,6 +22,7 @@
                         <button class="btn btn-success" type="submit">Enter</button>
                         <br/>
                         <br/>
+                        <p>Para registrarte presiona </p><a href="./Registrar.html">Registrar</a>
                     
                         
                     </form>
@@ -29,8 +30,9 @@
 
                     
                 </div>    
+                </div>
 </body>
 
 </html>
 
-<?php 
+

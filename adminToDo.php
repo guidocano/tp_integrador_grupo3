@@ -21,11 +21,10 @@ if (isset($_POST['agregar']))
 {
 ?>
 
+
 <form action='insertToDo.php' method='POST'>
 <span>Agregar Tarea</span>
 <input type="text" name="descripcion" value=''><br>
-<span>Realizado</span>
-<input type=text name='realizado' value=''><br>
 <input type=submit value='Agregar'>
 </form>
 </body>
@@ -40,9 +39,9 @@ if (!empty($_POST['aBorrar'])){
     foreach($_POST['aBorrar'] as $selected){
         $sql="DELETE FROM tareas where ID=".$selected;
         $resultado=mysqli_query($connect, $sql) or die(mysqli_error($connect));
-        print "tarea ID ".$selected." Borrado";
+        print "tarea fue Borrada <br>";
+        print "<a href='http://localhost/Curso/tp_integrador_grupo3-main/index.php'>Ir al inicio</a>";
     }
-
   }
 
   //MODIFICAR
@@ -65,8 +64,11 @@ if (!empty($_POST['aEditar']))
 <input type=text name='ID' value='<?php print $fila['ID']?>'><br>
 <span>Descripcion</span>
 <input type=text name='descripcion' value='<?php print $fila['descripcion']?>'><br>
-<span>Realizado</span>
-<input type=text name='realizado' value='<?php print $fila['realizado']?>'><br>
+<span>Realizado</span><br>
+<input type="radio" name='realizado' value='1'>
+<label>Realizada</label><br>
+<input type="radio" name='realizado' value='0'>
+<label>NO Realizada</label><br>
 <input type=submit value='Modificar'>
 </form>
 

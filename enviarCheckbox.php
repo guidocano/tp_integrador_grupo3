@@ -1,3 +1,16 @@
+
+<head>
+    <title>Admin ToDO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+
+
+<div class="container">
+
 <?php
 require_once 'connectDB.php';
 
@@ -9,34 +22,25 @@ if ($connect) {
 $instruccion="Select * from tareas where realizado > 0";
 $consulta=mysqli_query($connect,$instruccion) or die ("Fallo en la consulta");
 $filas=mysqli_num_rows($consulta);
-
-
-
-
-
-
-
-
-
-
     if ($filas == 1){
         print ("no hay tareas a realizar <br>");
     }else {       
         while ($fila=mysqli_fetch_array($consulta)){
-            print "<tr>
+            print "
+                <tr>
                <td><br>".$fila['descripcion']."<br></td>
-               </tr>";
+               </tr>  
+";  
         }
-        print "</table>";
+
     }
  desconectar($connect);
 } else {
     print " No conecto ";
 }
-
-
-print "<br> <a href='./index.php'>Volver a atras</a> <br>";
+print "<a href='./login.php'>Volver a atras</a>";
 ?>
 
 
-
+</div>
+</body>

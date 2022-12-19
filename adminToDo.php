@@ -33,7 +33,7 @@ if (isset($_POST['agregar']))
 
 </form>
 </body>
-<a href="./login.php">Volver atras</a>
+<h3><a href='./login.php'>Volver atras</a></h3>
 
 <?php
 }
@@ -45,10 +45,23 @@ if (!empty($_POST['aBorrar'])){
     foreach($_POST['aBorrar'] as $selected){
         $sql="DELETE FROM tareas where ID=".$selected;
         $resultado=mysqli_query($connect, $sql) or die(mysqli_error($connect));
-        print "tarea fue Borrada <br>";
-        print "<a href='http://localhost/Curso/tp_integrador_grupo3-main/index.php'>Ir al inicio</a>";
+        print " 
+
+        <div class='container'>
+        <h1> tarea fue Borrada <br></h1>
+        
+        <h3><a href='./login.php'>Volver atras</a></h3>
+        </div>        
+        ";
+
     }
   }
+
+
+
+
+
+
 
   //MODIFICAR
 if (!empty($_POST['aEditar']))
@@ -78,7 +91,7 @@ if (!empty($_POST['aEditar']))
 <label>NO Realizada</label><br>
 <input type=submit value='Modificar'>
 </form>
-<a href="./login.php">Volver atras</a>
+<h3><a href="./login.php">Volver atras</a></h3>
 </div>
 <?php
             }
